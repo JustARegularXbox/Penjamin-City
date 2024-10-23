@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Egg : MonoBehaviour
 {
-    public GameObject placeToSpawn;
     public GameObject placeToPlace;
+    public GameObject spawnPoint;
 
     void Update()
     {
@@ -17,6 +17,7 @@ public class Egg : MonoBehaviour
 
         if (distance < 0.3)
         {
+            spawnPoint.GetComponent<Spawner>().SpawnAtPoint();
             Destroy(gameObject);
         }
     }
