@@ -1,14 +1,16 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Genes : MonoBehaviour
+public class SnapCreature : MonoBehaviour
 {
     public GameObject spawnPoint;
     private Vector3 initialPosition;
     [SerializeField] private bool isOverTarget = false;
     private Transform targetPosition;
-    public GameObject genePreview;
+
+    
     private bool genePlaced;
 
     private List<GameObject> Previews = new List<GameObject>();
@@ -18,7 +20,7 @@ public class Genes : MonoBehaviour
     private void Start()
     {
         genePlaced = true;
-        
+
         initialPosition = transform.position;
 
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
@@ -28,9 +30,9 @@ public class Genes : MonoBehaviour
 
     private void InstantiateGenePreview(GameObject prefab)
     {
-        if (prefab != null  && !genePlaced) 
+        if (prefab != null && !genePlaced)
         {
-            
+
             GameObject preview = Instantiate(prefab, targetPosition.position, Quaternion.identity);
             Previews.Add(preview);
         }
@@ -39,7 +41,7 @@ public class Genes : MonoBehaviour
     private void OnPickedUp(SelectEnterEventArgs args)
     {
         TriggerHapticFeedback(args.interactorObject, 0.5f, 0.3f);
-        
+
     }
 
     private void OnReleased(SelectExitEventArgs args)
@@ -49,9 +51,9 @@ public class Genes : MonoBehaviour
         if (isOverTarget && targetPosition != null)
         {
             genePlaced = true;
-            
+
             transform.position = targetPosition.position;
-            transform.rotation = targetPosition.rotation;
+            //transform.rotation = targetPosition.rotation;
 
             foreach (GameObject preview in Previews)
             {
@@ -71,8 +73,8 @@ public class Genes : MonoBehaviour
         {
             isOverTarget = true;
             targetPosition = other.transform;
-            InstantiateGenePreview(genePreview);
-            
+            //InstantiateGenePreview(preview);
+
         }
     }
 
@@ -81,7 +83,7 @@ public class Genes : MonoBehaviour
         if (other.CompareTag("TargetArea"))
         {
             genePlaced = false;
-            
+
 
             isOverTarget = false;
             targetPosition = null;

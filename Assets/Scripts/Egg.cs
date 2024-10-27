@@ -13,7 +13,7 @@ public class Egg : MonoBehaviour
         Vector3 placeCurrentPos = placeToPlace.transform.position;
 
         float distance = Vector3.Distance(currentPos, placeCurrentPos);
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if (distance < 0.3)
         {
