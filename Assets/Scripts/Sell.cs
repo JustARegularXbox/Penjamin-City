@@ -9,21 +9,23 @@ public class Sell : MonoBehaviour
     //public GameObject modCheck;
     //public ModCheck modCheckS;
 
+    public static GameManager gameManager;
+
     private bool canSell;
+    private bool canEject;
 
     private void Start()
-    {
-        //modCheckS = modCheck.GetComponent<ModCheck>();
-        
+    {   
         canSell = false;
+        canEject = false;
     }
     
    public void sellCreature()
     {
         if (canSell) 
         {
+            gameManager.ChangeOrder();
             Destroy(GameObject.FindWithTag("creature"));
-
         }
 
     }
@@ -32,8 +34,14 @@ public class Sell : MonoBehaviour
     {
         if (other.CompareTag("creature"))
         {
-            canSell = true;
-
+            if (gameManager.CheckOrder())
+            {
+                canSell = true;
+            }
+            else
+            {
+                canEject = true;
+            }
         }
 
     }
