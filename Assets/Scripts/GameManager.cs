@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // Debug.Log(modInt);
+        // Debug.Log(modSpd);
+        // Debug.Log(modPwr);
+        // Debug.Log(modEco);
         createdCreature = (modInt, modSpd, modPwr, modEco) switch
         {
             (true, true, false, false) => 1,
@@ -73,6 +77,7 @@ public class GameManager : MonoBehaviour
         if (orderCounter < 6)
         {
             orderCounter = orderCounter + 1;
+            Debug.Log("orderCounter: "  + orderCounter);
         }
         if (humanity <= 100)
         {
@@ -119,7 +124,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("no prefab assigned!!");
         }
     }
-
+    
     // Method to clear previous spawned creatures before creating new ones
     public void ClearSpawnedCreatures()
     {

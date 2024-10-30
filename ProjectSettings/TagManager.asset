@@ -12,6 +12,7 @@ TagManager:
   - intEco
   - intSpd
   - creature
+  - GameManager
   layers:
   - Default
   - TransparentFX

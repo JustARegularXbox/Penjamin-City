@@ -8,12 +8,18 @@ public class Sell : MonoBehaviour
 
     //public GameObject modCheck;
     //public ModCheck modCheckS;
-
+    public static GameObject gameObj;
     public static GameManager gameManager;
 
     private bool canSell;
     private bool canEject;
 
+
+    private void Awake()
+    {
+        gameObj = GameObject.FindWithTag("GameManager");
+        gameManager = gameObj.GetComponent<GameManager>();
+    }
     private void Start()
     {   
         canSell = false;

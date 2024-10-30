@@ -5,6 +5,8 @@ using UnityEngine;
 public class ModCheck : MonoBehaviour
 {
     public static ModCheck instance;
+    public static GameObject gameObj;
+
     public static GameManager gameManager;
 
     private GameObject prefab;
@@ -12,6 +14,8 @@ public class ModCheck : MonoBehaviour
 
     private void Awake()
     {
+        gameObj = GameObject.FindWithTag("GameManager");
+        gameManager = gameObj.GetComponent<GameManager>();
         // Ensure there is only one instance of the manager (singleton pattern)
         if (instance == null)
         {
