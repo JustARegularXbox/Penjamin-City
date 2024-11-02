@@ -14,7 +14,7 @@ public class creatureAnimation : MonoBehaviour
     private void Start()
     {
         animationSpeed = 1;
-        SadCreatureAnimation();
+        //SadCreatureAnimation();
         //PetCreatureAnimation();
     }
 
@@ -27,18 +27,19 @@ public class creatureAnimation : MonoBehaviour
 
     public void SadCreatureAnimation()
     {
-        for (int weightValue = 0; weightValue <= 100; weightValue += 1/10)
-        {
-            SetBlendShapeWeight(0, weightValue * animationSpeed);
-            //animationSpeed += 1;
-            Debug.Log("loop");
-        }
-        
-        
+        SetBlendShapeWeight(0, 100);
+
     }
 
     public void PetCreatureAnimation()
     {
         SetBlendShapeWeight(1, 100); 
+    }
+
+    public void neutralCreatureAnimation()
+    {
+        SetBlendShapeWeight(0, 0);
+        SetBlendShapeWeight(1, 0);
+        SetBlendShapeWeight(2, 0);
     }
 }
