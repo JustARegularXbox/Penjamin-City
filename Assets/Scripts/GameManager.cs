@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int orderCounter = 1;
     private int createdCreature;
 
-    private int humanity = 0;
+    public int humanity = 0;
 
     public bool modInt = false;
     public bool modSpd = false;
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         }
         if (humanity <= 100)
         {
-            humanity = humanity + 20;
+            humanity = humanity + 17;
         }
         modInt = false;
         modSpd = false;

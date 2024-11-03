@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.InputSystem;
 using UnityEngine.XR;
-using static UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics.HapticsUtility;
-//using UnityEngine.XR.Interaction.Toolkit;
+using System.Threading.Tasks;
+using System;
 
 public class PetCreature : MonoBehaviour
 {
@@ -20,68 +19,52 @@ public class PetCreature : MonoBehaviour
     public static InputFeatureUsage<float> trigger;
     void Start()
     {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
-        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
-        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics & leftControllerCharacteristics, devices);
-        
-        foreach (var item in devices) 
-        {
-            Debug.Log(item.name + item.characteristics);
-        }
-
-        if(devices.Count > 0)
-        {
-            targetDevice = devices[0 & 1];
-        }
-
+        StartCoroutine(passTime(5));      
 
         canPet = false;
     }
 
     private void OnTriggerStay (Collider other)
     {
-        if (other.CompareTag("petCheck") & canPet)
-        {            
+        if ((other.CompareTag("RightHand") || other.CompareTag("LeftHand") & canPet)) 
+        {                     
+            
             creAnim.PetCreatureAnimation();
             Debug.Log("play animation for petting");
+            
         }
-        else
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("RightHand") || other.CompareTag("LeftHand"))
         {
             if (creAnim != null)
             {
                 creAnim.neutralCreatureAnimation();
             }
-            
+
         }
     }
 
 
-   
+
     private void Update()
-    {
-        petObj = GameObject.FindWithTag("creature");
-        //Debug.Log(petObj);
-        if (petObj != null)
-        {
-            creAnim = petObj.GetComponent<creatureAnimation>();
-            //Debug.Log(creAnim);
-        }
-       
+    {        
+        creAnim = this.GetComponentInParent<creatureAnimation>();
+        Debug.Log(creAnim);
         canPet = false;
 
         if (CheckPettingSpeed(targetDevice)) 
         {
             canPet = true;  
         }
-
-       
-
     }
 
     private bool CheckPettingSpeed(InputDevice controller)
     {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity) )
+        if (controller.TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity) )
         {
             float speed = velocity.magnitude;
             return speed >= minPettingSpeed && speed <= maxPettingSpeed;
@@ -91,5 +74,30 @@ public class PetCreature : MonoBehaviour
         return false;
     }
 
+    private IEnumerator passTime(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
+        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics & leftControllerCharacteristics, devices);
+
+        foreach (var item in devices)
+        {
+            Debug.Log(item.name + item.characteristics);
+        }
+
+        if (devices.Count > 0)
+        {
+            targetDevice = devices[0 & 1];
+            Debug.Log(targetDevice);
+        }
+        else
+        {
+            Debug.LogError("device count is 0");
+        }
+
+    }
 }
 

@@ -15,14 +15,5 @@ public class TriggerDialogue : MonoBehaviour
         dialogueBoxCode.ActivateLines(gameObject);
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
