@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 2b1b624b568469d49a384a5cbe6812cb
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_Material.003_AlbedoTransparency
+    second: {fileID: 2800000, guid: 5bdac4d8aaa043e48a3fe71be2451dfe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_Material.003_Emission
+    second: {fileID: 2800000, guid: df263b142f236a144a19c9bed60f7500, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_Material.003_MetallicSmoothness
+    second: {fileID: 2800000, guid: 420e5d8a0053a3d45858eeca66759302, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_Material.003_Normal
+    second: {fileID: 2800000, guid: ca31d18efce393c47a07cf7ad3ca5057, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_light_metal_AlbedoTransparency
+    second: {fileID: 2800000, guid: 144b35baa814144409cfc9ccf9e0b636, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_light_metal_Emission
+    second: {fileID: 2800000, guid: c58a3eb6a25c8da4ebaa834050709196, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_light_metal_MetallicSmoothness
+    second: {fileID: 2800000, guid: 2f86a8e70a4a91d4cad119f6b5484537, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light_light_metal_Normal
+    second: {fileID: 2800000, guid: 48c4fdfd2460ae94881b5e3d3d1c5b30, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_machine_glass_BaseMap
+    second: {fileID: 2800000, guid: 0154b714312c7e24ca74e02906e89bd2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_machine_glass_Emissive
+    second: {fileID: 2800000, guid: b87d296c700f5ce4b8629a262f8ce045, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_machine_glass_Normal
+    second: {fileID: 2800000, guid: 8896d7c6b7b970141801b22fd099c5e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_macihne_metal_BaseMap
+    second: {fileID: 2800000, guid: f2ec6c8dee4b0c243be14bfab7ec4ce1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_macihne_metal_Emissive
+    second: {fileID: 2800000, guid: 6497d02a857b56047b8ad2ec41bb27a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: machine_macihne_metal_Normal
+    second: {fileID: 2800000, guid: ce966b880a86ed2448288fbfc14899c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sell machine_SellMetal_BaseMap
+    second: {fileID: 2800000, guid: 8a16f70af470c2a4fa57c22b3bd20a23, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sell machine_SellMetal_Normal
+    second: {fileID: 2800000, guid: b8f603da809ccf1448ecd5bcb7da3b8a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.003_AlbedoTransparency
+    second: {fileID: 2800000, guid: 7c9ecdc2671056e42bad475e28c70770, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.003_Emission
+    second: {fileID: 2800000, guid: a276841488e35bf4a8db569419818f11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.003_MetallicSmoothness
+    second: {fileID: 2800000, guid: 8b9bf07b4ccf98742b2b330d90b66122, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.003_Normal
+    second: {fileID: 2800000, guid: e562c408e6654b04498ef54f217bd43e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.004_AlbedoTransparency
+    second: {fileID: 2800000, guid: 8c867be94c8267b46bc0a7b6e2a9d238, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.004_Emission
+    second: {fileID: 2800000, guid: e0ff534ab1964a247a479f931274ee98, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.004_MetallicSmoothness
+    second: {fileID: 2800000, guid: ac0db32face1a7e419cf5cb85a24c6dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall1_Material.004_Normal
+    second: {fileID: 2800000, guid: d83c312d578e9f74790fa8cab21117b5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_Material.003_AlbedoTransparency
+    second: {fileID: 2800000, guid: 412d16ad4fc066347bea682df64ccf71, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_Material.003_Emission
+    second: {fileID: 2800000, guid: e7d77143ad2c33849b3bba61168b72aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_Material.003_MetallicSmoothness
+    second: {fileID: 2800000, guid: c9e6d0a6ffff27d4b828089b2764253c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_Material.003_Normal
+    second: {fileID: 2800000, guid: 94315c46a925e1f48adafec367c8eb05, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_machine_glass_AlbedoTransparency
+    second: {fileID: 2800000, guid: 1e64ad013f522ab43b7b7f8dd4dd086d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_machine_glass_Emission
+    second: {fileID: 2800000, guid: b7f1803bbeb6a1f418d358e220e76a70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_machine_glass_MetallicSmoothness
+    second: {fileID: 2800000, guid: 66814ddf20c96794e983b92c7f99f3b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: thingonwall2_machine_glass_Normal
+    second: {fileID: 2800000, guid: 5a2e6ce731fe8f9488f4e7e80b8caf20, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
