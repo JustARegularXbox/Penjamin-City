@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -29,6 +30,19 @@ public class GameManager : MonoBehaviour
 
     public Transform previewSpawn;
     public Transform creatureSpawn;
+
+    public OrderList orderList;
+    public Order[] orderArray = new Order[6];
+
+    private GameObject uiObj;
+    private UIManager uiManager;
+
+    void Awake()
+    {
+        LoadOrders();
+        uiObj = GameObject.FindWithTag("UI");
+        uiManager = uiObj.GetComponent<UIManager>();
+    }
 
     void Update()
     {
@@ -89,6 +103,7 @@ public class GameManager : MonoBehaviour
         modEco = false;
         reqPre = null;
         reqPrev = null;
+        uiManager.UpdateText();
     }
 
     public void ResetGame()
@@ -158,5 +173,46 @@ public class GameManager : MonoBehaviour
             Destroy(preview);  // Destroy all previously spawned creatures
         }
         spawnedPreviews.Clear();  // Clear the list
+    }
+
+    [System.Serializable]
+    public class Order
+    {
+        public string customer;
+        public string subject;
+        public string description;
+    }
+
+    [System.Serializable]
+    public class OrderList
+    {
+        public Order[] orders;
+    }
+
+    public void LoadOrders()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("orders");
+
+        if (jsonFile != null)
+        {
+            orderList = JsonUtility.FromJson<OrderList>(jsonFile.text);
+
+            Debug.Log(orderList);
+
+            if (orderList.orders == null)
+            {
+                Debug.LogError("JSON file parsed, but 'orders' is null. Check JSON structure.");
+            }
+
+            foreach (Order order in orderList.orders)
+            {
+                Debug.Log($"Customer: {order.customer}, Subject: {order.subject}, Description: {order.description}");
+                orderArray[orderCounter] = order;
+            }
+        }
+        else
+        {
+            Debug.LogError("Could not find orders.json in Resources folder!");
+        }
     }
 }

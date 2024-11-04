@@ -1,0 +1,35 @@
+{
+    "orders": 
+    [
+        {
+            "customer": "Ministry of Crisis Operations & Recovery (MCOR)",
+            "subject": "Specialized Creature Request for High-Risk Capture / Rescue Operations",
+            "description": "We seek creatures capable of navigating dangerous environments with ease and precision, covering vast distances swiftly and exerting the necessary force to overcome barriers in critical moments."
+        },
+        {
+            "customer": "GreenHorizon Cleanup",
+            "subject": "Request for Specialized Creatures in Restoration Efforts",
+            "description": "As part of our mission to restore polluted areas, we need creatures with the natural ability to navigate urban environments efficiently while minimizing environmental impact. Our aim is to prepare and sell them to assist in city restoration."
+        },
+        {
+            "customer": "National Wildfire Defense Agency (NWDA)",
+            "subject": "Request for Specialized Creature for Wildfire Containment",
+            "description": "We are looking for a creature that can respond to fire situations, assess dynamic threats, and act accordingly to prevent further spread. Sharp instincts for real-time challenges are essential."
+        },
+        {
+            "customer": "Agency for Wildlife Regulation (AWR)",
+            "subject": "Request for Specialized Creature to Control Invasive Species",
+            "description": "We seek a resilient creature capable of managing invasive species in forest settings without disturbing the ecosystem. It should be suited for wide-scale deployment in difficult areas."
+        },
+        {
+            "customer": "IronClad Construction",
+            "subject": "Request for Specialized Creatures for Construction Tasks",
+            "description": "We need creatures to handle demanding tasks on construction sites, from moving materials to operating equipment precisely. Their capabilities will be focused solely on labor with minimal concern for comfort."
+        },
+        {
+            "customer": "Ministry of Land Recovery & Terraforming (MLRT)",
+            "subject": "Request for Specialized Creature for Environmental Restoration",
+            "description": "We require a creature to assist in regenerating ecosystems and tackling climate challenges. It would address environmental imbalances, engaging actively in sustainable recovery."
+        }
+    ]
+}

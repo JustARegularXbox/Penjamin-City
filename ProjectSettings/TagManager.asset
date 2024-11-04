@@ -16,6 +16,10 @@ TagManager:
   - petCheck
   - LeftHand
   - RightHand
+  - customer
+  - subject
+  - description
+  - UI
   layers:
   - Default
   - TransparentFX
