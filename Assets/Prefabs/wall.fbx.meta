@@ -8,47 +8,47 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_lights_BaseMap
-    second: {fileID: 2800000, guid: f5f426a550eb6344aba5356d2330cf8b, type: 3}
+    second: {fileID: 2800000, guid: c1a252b325252944eac0517b376ddd6a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_lights_Emissive
-    second: {fileID: 2800000, guid: 8f11f7429e575804fb1d235286265a34, type: 3}
+    second: {fileID: 2800000, guid: f400e654e0ef2d3479ffee63ef7eca04, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_lights_Normal
-    second: {fileID: 2800000, guid: d58ef86a2a3bcde459941d3c6fb8bd5e, type: 3}
+    second: {fileID: 2800000, guid: 326bfac1363ac774da4c710fcd00b6c2, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_wallBase_BaseMap
-    second: {fileID: 2800000, guid: 6ba959a4c1865c24bb03f2a70c8361b3, type: 3}
+    second: {fileID: 2800000, guid: daa7719f1dd4f454bab4304cef885521, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_wallBase_Normal
-    second: {fileID: 2800000, guid: 03c6bd0063759fd408e4c824444932af, type: 3}
+    second: {fileID: 2800000, guid: 4b4e73ccc21ba4049a75bf18c8e7cb8c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_wallPattern_BaseMap
-    second: {fileID: 2800000, guid: 07a1eb99d4e9c9045a043271ee49b26f, type: 3}
+    second: {fileID: 2800000, guid: 5377cd90b6068e64eab2614372d9d3ac, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_wallPattern_Normal
-    second: {fileID: 2800000, guid: beda411adcd791d4885ff306064d772c, type: 3}
+    second: {fileID: 2800000, guid: 240d7f0d87d35674b8ae42f84f313c9a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_windows_BaseMap
-    second: {fileID: 2800000, guid: 04e7d77d01891a14fb3954a881096c7f, type: 3}
+    second: {fileID: 2800000, guid: aaebad3841dcf7f4a926711da809d993, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wall_windows_Normal
-    second: {fileID: 2800000, guid: 2b82c8a76cee69a4dab30a028b6aa83f, type: 3}
+    second: {fileID: 2800000, guid: c7393719ffd0a37449391236cd5e45ff, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -82,7 +82,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.7
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
@@ -106,12 +106,12 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
-    secondaryUVPackMargin: 4
+    secondaryUVPackMargin: 1
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
@@ -121,7 +121,7 @@ ModelImporter:
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 3
   referencedClips: []
   importAnimation: 1
   humanDescription:

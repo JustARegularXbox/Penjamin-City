@@ -14,6 +14,8 @@ public class Sell : MonoBehaviour
     private bool canSell;
     private bool canEject;
 
+    public TriggerDialogue goodBossFeedbackSC;
+    public TriggerDialogue badBossFeedbackSC;
 
     private void Awake()
     {
@@ -32,6 +34,12 @@ public class Sell : MonoBehaviour
         {
             gameManager.ChangeOrder();
             Destroy(GameObject.FindWithTag("creature"));
+
+            goodBossFeedbackSC.SendLines();
+
+        }else if (canEject)
+        {
+            
         }
 
     }
@@ -47,6 +55,8 @@ public class Sell : MonoBehaviour
             else
             {
                 canEject = true;
+
+                badBossFeedbackSC.SendLines();
             }
         }
 

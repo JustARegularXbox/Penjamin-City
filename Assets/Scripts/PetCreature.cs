@@ -24,19 +24,28 @@ public class PetCreature : MonoBehaviour
         canPet = false;
     }
 
-    private void OnTriggerStay (Collider other)
+    public void OnTriggerStay (Collider other)
     {
-        if ((other.CompareTag("RightHand") || other.CompareTag("LeftHand") & canPet)) 
-        {                     
-            
-            creAnim.PetCreatureAnimation();
-            Debug.Log("play animation for petting");
-            
+        if (other.CompareTag("RightHand") || other.CompareTag("LeftHand")) 
+        {
+            if (canPet)
+            {
+                creAnim.PetCreatureAnimation();
+                Debug.Log("play animation for petting");
+            }
+            else
+            {
+                Debug.Log("cannot pet");
+            }
+        }
+        else
+        {
+            //Debug.Log("no collision with hands ");
         }
         
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("RightHand") || other.CompareTag("LeftHand"))
         {
@@ -53,12 +62,16 @@ public class PetCreature : MonoBehaviour
     private void Update()
     {        
         creAnim = this.GetComponentInParent<creatureAnimation>();
-        Debug.Log(creAnim);
-        canPet = false;
+        //Debug.Log(creAnim);
+        
 
         if (CheckPettingSpeed(targetDevice)) 
         {
-            canPet = true;  
+            canPet = true;
+        }
+        else
+        {
+            canPet = false;
         }
     }
 

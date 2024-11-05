@@ -8,14 +8,11 @@ public class creatureAnimation : MonoBehaviour
     public SkinnedMeshRenderer eyesMeshRenderer;
     public SkinnedMeshRenderer mouthMeshRenderer;
     public SkinnedMeshRenderer bodyMeshRenderer;
-
-    [SerializeField] private float animationSpeed;
-    private int weightValue;
+       
+    
     private void Start()
     {
-        animationSpeed = 1;
-        //SadCreatureAnimation();
-        //PetCreatureAnimation();
+       
     }
 
     private void SetBlendShapeWeight(int index, float weight)
@@ -33,7 +30,8 @@ public class creatureAnimation : MonoBehaviour
 
     public void PetCreatureAnimation()
     {
-        SetBlendShapeWeight(1, 100); 
+        SetBlendShapeWeight(1, 100);
+        
     }
 
     public void neutralCreatureAnimation()

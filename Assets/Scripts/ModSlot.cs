@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ModSlot : MonoBehaviour
 {
-    public static GameObject gameObj;
-    public static GameManager gameManager;
+    public GameObject gameObj;
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -27,6 +27,7 @@ public class ModSlot : MonoBehaviour
         // When the object leaves the trigger, set the attribute to false
         CheckCombination(other.tag, false);
         ModCheck.instance.CreaturePreview();
+        gameManager.ClearSpawnedPreviews();
         Debug.Log("exit");
     }
 
@@ -50,7 +51,7 @@ public class ModSlot : MonoBehaviour
                     break;
             }
         }
-        Debug.Log("check combi");
+        
     }
    
 

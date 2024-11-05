@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Genes : MonoBehaviour
 {
-    public GameObject spawnPoint;
+    
     private Vector3 initialPosition;
     [SerializeField] private bool isOverTarget = false;
     private Transform targetPosition;

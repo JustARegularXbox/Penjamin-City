@@ -20,6 +20,7 @@ TagManager:
   - subject
   - description
   - UI
+  - power
   layers:
   - Default
   - TransparentFX

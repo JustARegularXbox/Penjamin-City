@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System.Threading.Tasks;
 
 
 public class GameManager : MonoBehaviour
@@ -46,20 +47,22 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Debug.Log(modInt);
-        // Debug.Log(modSpd);
-        // Debug.Log(modPwr);
-        // Debug.Log(modEco);
+        //Debug.Log(modInt);
+        //Debug.Log(modSpd);
+        //Debug.Log(modPwr);
+        //Debug.Log(modEco);
         createdCreature = (modInt, modSpd, modPwr, modEco) switch
         {
-            (true, true, false, false) => 1,
-            (true, false, true, false) => 2,
-            (true, false, false, true) => 3,
-            (false, true, true, false) => 4,
-            (false, true, false, true) => 5,
-            (false, false, true, true) => 6,
-            _ => 0
+            (true, true, false, false) => 0,
+            (true, false, true, false) => 1,
+            (true, false, false, true) => 2,
+            (false, true, true, false) => 3,
+            (false, true, false, true) => 4,
+            (false, false, true, true) => 5,
+            _ => -1
         };
+
+        //Debug.Log(createdCreature);
     }
 
     public GameObject GetPrefab()
@@ -91,7 +94,7 @@ public class GameManager : MonoBehaviour
         if (orderCounter < 6)
         {
             orderCounter = orderCounter + 1;
-            Debug.Log("orderCounter: "  + orderCounter);
+            Debug.Log("orderCounter: " + orderCounter);
         }
         if (humanity <= 100)
         {
@@ -124,22 +127,19 @@ public class GameManager : MonoBehaviour
         ClearSpawnedPreviews();
         if (prefab != null)
         {
-            
-            GameObject newCreature = Instantiate(prefab, creatureSpawn.position, creatureSpawn.rotation); 
+
+            GameObject newCreature = Instantiate(prefab, creatureSpawn.position, creatureSpawn.rotation);
             spawnedCreatures.Add(newCreature);  //for list
 
-            MeshCollider meshC = newCreature.AddComponent<MeshCollider>();
-            meshC.convex = true;
-
-            newCreature.AddComponent<XRGrabInteractable>(); //make it grabable
             
+
         }
         else
         {
             Debug.LogError("no prefab assigned!!");
         }
     }
-    
+
     // Method to clear previous spawned creatures before creating new ones
     public void ClearSpawnedCreatures()
     {
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     {
         if (prefab != null)
         {
-            
+
             GameObject newPreview = Instantiate(prefab, previewSpawn.position, previewSpawn.rotation); // Spawn at (0, 0, 0) with no rotation
             spawnedPreviews.Add(newPreview);  // Keep track of spawned creature
             newPreview.AddComponent<spinObject>(); //make the preview spin around

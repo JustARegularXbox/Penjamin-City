@@ -5,13 +5,13 @@ using UnityEngine;
 public class ModCheck : MonoBehaviour
 {
     public static ModCheck instance;
-    public static GameObject gameObj;
+    public GameObject gameObj;
 
-    public static GameManager gameManager;
+    public GameManager gameManager;
 
     private GameObject prefab;
     private GameObject preview;
-
+    private TriggerDialogue DialogueSC;
     private void Awake()
     {
         gameObj = GameObject.FindWithTag("GameManager");
@@ -27,6 +27,7 @@ public class ModCheck : MonoBehaviour
     {
         prefab = gameManager.GetPrefab();
         preview = gameManager.GetPreview();
+        DialogueSC = GetComponent<TriggerDialogue>();
     }
 
     public void CreaturePreview()
@@ -39,6 +40,7 @@ public class ModCheck : MonoBehaviour
     {
         gameManager.ClearSpawnedCreatures();
         gameManager.InstantiateCreature(prefab);
+        DialogueSC.SendLines();
     }
 
 }
