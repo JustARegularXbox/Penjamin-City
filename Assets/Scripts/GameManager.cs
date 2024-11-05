@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public SoldList soldList;
     public Sold[] soldArray = new Sold[6];
 
+    
     private GameObject uiObj;
     private UIManager uiManager;
 
@@ -205,6 +206,7 @@ public class GameManager : MonoBehaviour
     {
         public Sold[] solds;
     }
+    
 
     public void LoadOrders()
     {
@@ -256,4 +258,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Could not find solds.json in Resources folder!");
         }
     }
+    
 }
+

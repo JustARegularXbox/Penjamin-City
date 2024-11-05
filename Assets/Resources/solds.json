@@ -3,39 +3,39 @@
     [
         {
             "customer": "Ministry of Crisis Operations & Recovery (MCOR)",
-            "mod": "Speed + Power",
-            "name": "test",
-            "job": "test"
+            "mod": "<color=orange>Speed</color>\n+\n(&\)<color=red>Pow</color>",
+            "name": "Sharper",
+            "job": "Rescue &\ncapture"
         },
         {
-            "customer": "test",
-            "mod": "test",
-            "name": "test",
-            "job": "test"
+            "customer": "GreenHorizon Cleanup",
+            "mod": "<color=green>Eco</color>\n+\n(&\)<color=orange>Speed</color>",
+            "name": "Genny",
+            "job": "City\nRestoration"
         },
         {
-            "customer": "test",
-            "mod": "test",
-            "name": "test",
-            "job": "test"
+            "customer": "National Wildfire Defense Agency (NWDA)",
+            "mod": "<color=green>Eco</color>\n+\n(&\)<color=blue>int</color>",
+            "name": "Swooshy",
+            "job": "Wildfire\nPrevention"
         },
         {
-            "customer": "test",
-            "mod": "test",
-            "name": "test",
-            "job": "test"
+            "customer": "Agency for Wildlife Regulation (AWR)",
+            "mod": "<color=green>Eco</color>\n+\n(&\)<color=red>Pow</color>",
+            "name": "Poki",
+            "job": "Controlling\nSpecies"
         },
         {
-            "customer": "test",
-            "mod": "test",
-            "name": "test",
-            "job": "test"
+            "customer": "IronClad Construction",
+            "mod": "<color=blue>Int</color>\n+\n(&\)<color=red>Pow</color>",
+            "name": "Clank",
+            "job": "Construciton"
         },
         {
-            "customer": "test",
-            "mod": "test",
-            "name": "test",
-            "job": "test"
+            "customer": "Ministry of Land Recovery & Terraforming (MLRT)",
+            "mod": "<color=green>Eco</color>\n+\n(&\)<color=blue>Int</color>",
+            "name": "Shroomy",
+            "job": "Terraforming"
         }
     ]
 }

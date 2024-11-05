@@ -37,9 +37,11 @@ public class Sell : MonoBehaviour
 
             goodBossFeedbackSC.SendLines();
 
-        }else if (canEject)
+        }
+        else if (canEject)
         {
-            
+            Destroy(GameObject.FindWithTag("creature"));
+            badBossFeedbackSC.SendLines();
         }
 
     }
@@ -56,7 +58,7 @@ public class Sell : MonoBehaviour
             {
                 canEject = true;
 
-                badBossFeedbackSC.SendLines();
+                
             }
         }
 
