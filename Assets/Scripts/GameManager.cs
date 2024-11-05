@@ -35,18 +35,23 @@ public class GameManager : MonoBehaviour
     public OrderList orderList;
     public Order[] orderArray = new Order[6];
 
+    public SoldList soldList;
+    public Sold[] soldArray = new Sold[6];
+
     private GameObject uiObj;
     private UIManager uiManager;
 
     void Awake()
     {
         LoadOrders();
+        LoadSolds();
         uiObj = GameObject.FindWithTag("UI");
         uiManager = uiObj.GetComponent<UIManager>();
     }
 
     void Update()
     {
+        uiManager.UpdateText();
         //Debug.Log(modInt);
         //Debug.Log(modSpd);
         //Debug.Log(modPwr);
@@ -155,7 +160,6 @@ public class GameManager : MonoBehaviour
     {
         if (prefab != null)
         {
-
             GameObject newPreview = Instantiate(prefab, previewSpawn.position, previewSpawn.rotation); // Spawn at (0, 0, 0) with no rotation
             spawnedPreviews.Add(newPreview);  // Keep track of spawned creature
             newPreview.AddComponent<spinObject>(); //make the preview spin around
@@ -189,6 +193,19 @@ public class GameManager : MonoBehaviour
         public Order[] orders;
     }
 
+    [System.Serializable]
+    public class Sold
+    {
+        public string customer;
+        public string mod;
+        public string name;
+        public string job;
+    }
+    public class SoldList
+    {
+        public Sold[] solds;
+    }
+
     public void LoadOrders()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("orders");
@@ -213,6 +230,30 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogError("Could not find orders.json in Resources folder!");
+        }
+    }
+
+    public void LoadSolds()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("solds");
+
+        if (jsonFile != null)
+        {
+            soldList = JsonUtility.FromJson<SoldList>(jsonFile.text);
+
+            if (soldList.solds == null)
+            {
+                Debug.LogError("JSON file parsed, but 'solds' is null. Check JSON structure.");
+            }
+
+            foreach (Sold sold in soldList.solds)
+            {
+                soldArray[orderCounter] = sold;
+            }
+        }
+        else
+        {
+            Debug.LogError("Could not find solds.json in Resources folder!");
         }
     }
 }

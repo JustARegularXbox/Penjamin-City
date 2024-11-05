@@ -13,20 +13,25 @@ public class ModSlot : MonoBehaviour
         gameManager = gameObj.GetComponent<GameManager>();
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         //IT ONLY CHECKS THE BOOLS WHEN YOU PLACE THE GENES
         Debug.Log(other);
         CheckCombination(other.tag, true);
-        ModCheck.instance.CreaturePreview();
+        Invoke("SpawnPreview", 2);
         Debug.Log("collide");
+    }
+
+    private void SpawnPreview()
+    {
+        ModCheck.instance.CreaturePreview();
     }
 
     private void OnTriggerExit(Collider other)
     {
         // When the object leaves the trigger, set the attribute to false
         CheckCombination(other.tag, false);
-        ModCheck.instance.CreaturePreview();
         gameManager.ClearSpawnedPreviews();
         Debug.Log("exit");
     }

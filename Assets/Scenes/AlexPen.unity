@@ -1752,6 +1752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b900255a912bb1747832242f43af7d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &401001473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,6 +1766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120e54a654e021a42aa93d0e83358401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &401001474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1967,7 +1971,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c846465574add74eabc3e93913209da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
   isOverTarget: 0
   genePreview: {fileID: 2989061276119373680, guid: 20a986b25aae4d14faf74c1348b86f8a, type: 3}
 --- !u!114 &426998167
@@ -2342,6 +2345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9703ccdd9872d4485e161fbf88f0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodBossFeedbackSC: {fileID: 0}
+  badBossFeedbackSC: {fileID: 0}
 --- !u!65 &490717537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3239,7 +3244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c846465574add74eabc3e93913209da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
   isOverTarget: 0
   genePreview: {fileID: 2989061276119373680, guid: 20a986b25aae4d14faf74c1348b86f8a, type: 3}
 --- !u!1 &655554472
@@ -7181,18 +7185,18 @@ MonoBehaviour:
   modEco: 0
   prefabsCre:
   - {fileID: 7466209055000098400, guid: f84b1c19ef3f37245a0e6d3e8e8dcd56, type: 3}
-  - {fileID: 7466209055000098400, guid: f84b1c19ef3f37245a0e6d3e8e8dcd56, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 919132149155446097, guid: f4b289a1ba362654e9f2b01180d5f5a8, type: 3}
+  - {fileID: 919132149155446097, guid: 53ad32756d81fcf44aab618d27144cd2, type: 3}
+  - {fileID: 2989061276119373680, guid: 20a986b25aae4d14faf74c1348b86f8a, type: 3}
+  - {fileID: 3764466590619502303, guid: 4fb9fae61ae959d4995c710aeaf23597, type: 3}
+  - {fileID: 1209081728454780371, guid: a5d91d0f00ef74e4db63e09d65877dd4, type: 3}
   prefabsPre:
   - {fileID: 7466209055000098400, guid: f84b1c19ef3f37245a0e6d3e8e8dcd56, type: 3}
-  - {fileID: 7466209055000098400, guid: f84b1c19ef3f37245a0e6d3e8e8dcd56, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 919132149155446097, guid: f4b289a1ba362654e9f2b01180d5f5a8, type: 3}
+  - {fileID: 919132149155446097, guid: 53ad32756d81fcf44aab618d27144cd2, type: 3}
+  - {fileID: 2989061276119373680, guid: 20a986b25aae4d14faf74c1348b86f8a, type: 3}
+  - {fileID: 3764466590619502303, guid: 4fb9fae61ae959d4995c710aeaf23597, type: 3}
+  - {fileID: 1209081728454780371, guid: a5d91d0f00ef74e4db63e09d65877dd4, type: 3}
   previewSpawn: {fileID: 1381507727}
   creatureSpawn: {fileID: 232879518}
   orderList:
@@ -7216,6 +7220,31 @@ MonoBehaviour:
   - customer: 
     subject: 
     description: 
+  soldArray:
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
 --- !u!64 &1629152771
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7832,7 +7861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c846465574add74eabc3e93913209da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
   isOverTarget: 0
   genePreview: {fileID: 2989061276119373680, guid: 20a986b25aae4d14faf74c1348b86f8a, type: 3}
 --- !u!1 &1821149231
@@ -7883,6 +7911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b900255a912bb1747832242f43af7d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1821149234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7895,6 +7925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120e54a654e021a42aa93d0e83358401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &1821149235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9297,7 +9329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d330258445b0f084ca11e2e50c748e8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2030913
+      value: 1.364
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d330258445b0f084ca11e2e50c748e8d, type: 3}
       propertyPath: m_LocalPosition.z
