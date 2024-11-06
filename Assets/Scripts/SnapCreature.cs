@@ -52,7 +52,7 @@ public class SnapCreature : MonoBehaviour
         {
             genePlaced = true;
 
-            transform.position = targetPosition.position;
+            transform.position = targetPosition.position + new Vector3(0, (float)0.3, 0);
             //transform.rotation = targetPosition.rotation;
 
             foreach (GameObject preview in Previews)

@@ -3,37 +3,37 @@
     [
         {
             "customer": "Ministry of Crisis Operations & Recovery (MCOR)",
-            "mod": "<color=orange>Speed</color>\n+\n(&\)<color=red>Pow</color>",
+            "mod": "<color=orange>Speed</color>\n+\n<color=red>Pow</color>",
             "name": "Sharper",
             "job": "Rescue &\ncapture"
         },
         {
             "customer": "GreenHorizon Cleanup",
-            "mod": "<color=green>Eco</color>\n+\n(&\)<color=orange>Speed</color>",
+            "mod": "<color=green>Eco</color>\n+\n<color=orange>Spd</color>",
             "name": "Genny",
             "job": "City\nRestoration"
         },
         {
             "customer": "National Wildfire Defense Agency (NWDA)",
-            "mod": "<color=green>Eco</color>\n+\n(&\)<color=blue>int</color>",
+            "mod": "<color=blue>Int</color>\n+\n<color=orange>Spd</color>",
             "name": "Swooshy",
             "job": "Wildfire\nPrevention"
         },
         {
             "customer": "Agency for Wildlife Regulation (AWR)",
-            "mod": "<color=green>Eco</color>\n+\n(&\)<color=red>Pow</color>",
+            "mod": "<color=green>Eco</color>\n+\n<color=red>Pow</color>",
             "name": "Poki",
             "job": "Controlling\nSpecies"
         },
         {
             "customer": "IronClad Construction",
-            "mod": "<color=blue>Int</color>\n+\n(&\)<color=red>Pow</color>",
+            "mod": "<color=blue>Int</color>\n+\n<color=red>Pow</color>",
             "name": "Clank",
             "job": "Construciton"
         },
         {
             "customer": "Ministry of Land Recovery & Terraforming (MLRT)",
-            "mod": "<color=green>Eco</color>\n+\n(&\)<color=blue>Int</color>",
+            "mod": "<color=green>Eco</color>\n+\n<color=blue>Int</color>",
             "name": "Shroomy",
             "job": "Terraforming"
         }

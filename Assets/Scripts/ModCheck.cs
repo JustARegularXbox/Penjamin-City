@@ -11,7 +11,7 @@ public class ModCheck : MonoBehaviour
 
     private GameObject prefab;
     private GameObject preview;
-    private TriggerDialogue DialogueSC;
+    private TriggerDialogue3 DialogueSC;
     private void Awake()
     {
         gameObj = GameObject.FindWithTag("GameManager");
@@ -27,7 +27,7 @@ public class ModCheck : MonoBehaviour
     {
         prefab = gameManager.GetPrefab();
         preview = gameManager.GetPreview();
-        DialogueSC = GetComponent<TriggerDialogue>();
+        DialogueSC = GetComponent<TriggerDialogue3>();
     }
 
     public void CreaturePreview()
@@ -40,7 +40,7 @@ public class ModCheck : MonoBehaviour
     {
         gameManager.ClearSpawnedCreatures();
         gameManager.InstantiateCreature(prefab);
-        DialogueSC.SendLines();
+        DialogueSC.SendLines3();
     }
 
 }

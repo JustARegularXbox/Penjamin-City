@@ -15,8 +15,10 @@ public class Sell : MonoBehaviour
     private bool canEject;
 
     public TriggerDialogue goodBossFeedbackSC;
-    public TriggerDialogue badBossFeedbackSC;
+    public TriggerDialogue2 badBossFeedbackSC;
 
+    //public SellMachine_animations sellAnimSC;
+    
     private void Awake()
     {
         gameObj = GameObject.FindWithTag("GameManager");
@@ -27,21 +29,31 @@ public class Sell : MonoBehaviour
         canSell = false;
         canEject = false;
     }
+
+    public bool GetCanSell()
+    {
+        return canSell;
+    }
     
    public void sellCreature()
     {
         if (canSell) 
         {
+            goodBossFeedbackSC.SendLines();
+            canSell = false;
             gameManager.ChangeOrder();
             Destroy(GameObject.FindWithTag("creature"));
+            //sellAnimSC.Sold_animation();
 
-            goodBossFeedbackSC.SendLines();
-
+            Debug.Log("sell creature");
         }
         else if (canEject)
         {
+            badBossFeedbackSC.SendLines2();
             Destroy(GameObject.FindWithTag("creature"));
-            badBossFeedbackSC.SendLines();
+            //sellAnimSC.Kill_animation();
+            Debug.Log("kill creature");
+            canEject = false;
         }
 
     }
@@ -50,15 +62,21 @@ public class Sell : MonoBehaviour
     {
         if (other.CompareTag("creature"))
         {
+            creatureAnimation animationSC  = other.GetComponent<creatureAnimation>();
+            animationSC.SadCreatureAnimation();
+            //animationSC.RotateCreature();
+
             if (gameManager.CheckOrder())
             {
                 canSell = true;
+                Debug.Log("canesell true");
+                
             }
             else
             {
                 canEject = true;
+                Debug.Log("caneject true");
 
-                
             }
         }
 

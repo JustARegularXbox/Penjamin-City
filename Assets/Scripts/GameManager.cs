@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.UI;
 using System.Threading.Tasks;
 
 
@@ -11,11 +12,11 @@ public class GameManager : MonoBehaviour
     private List<GameObject> spawnedCreatures = new List<GameObject>();
     private List<GameObject> spawnedPreviews = new List<GameObject>();
 
-    public int[] orders = { 3, 1, 6, 4, 2, 5 };
-    public int orderCounter = 1;
+    private int[] orders = { 0, 1, 2, 3, 4, 5 };
+    private int orderCounter = 0;
     private int createdCreature;
 
-    public int humanity = 0;
+    private int humanity = 0;
 
     public bool modInt = false;
     public bool modSpd = false;
@@ -25,9 +26,9 @@ public class GameManager : MonoBehaviour
     private GameObject reqPre;
     private GameObject reqPrev;
 
-    public GameObject[] prefabsCre = new GameObject[6];
+    public GameObject[] prefabsCre = new GameObject[7];
 
-    public GameObject[] prefabsPre = new GameObject[6];
+    public GameObject[] prefabsPre = new GameObject[7];
 
     public Transform previewSpawn;
     public Transform creatureSpawn;
@@ -52,20 +53,23 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(orders[orderCounter]);
+        //Debug.Log(createdCreature);
+        //Debug.Log(orderCounter);
         uiManager.UpdateText();
-        //Debug.Log(modInt);
-        //Debug.Log(modSpd);
-        //Debug.Log(modPwr);
-        //Debug.Log(modEco);
+        Debug.Log("modInt " + modInt);
+        Debug.Log("modSpd " + modSpd);
+        Debug.Log("modPwr " + modPwr);
+        Debug.Log("modEco " + modEco);
         createdCreature = (modInt, modSpd, modPwr, modEco) switch
         {
-            (true, true, false, false) => 0,
-            (true, false, true, false) => 1,
-            (true, false, false, true) => 2,
-            (false, true, true, false) => 3,
-            (false, true, false, true) => 4,
-            (false, false, true, true) => 5,
-            _ => -1
+            (true, true, false, false) => 2,
+            (true, false, true, false) => 4,
+            (true, false, false, true) => 5,
+            (false, true, true, false) => 0,
+            (false, true, false, true) => 1,
+            (false, false, true, true) => 3,
+            _ => 6
         };
 
         //Debug.Log(createdCreature);
@@ -81,11 +85,19 @@ public class GameManager : MonoBehaviour
         return reqPrev = prefabsPre[createdCreature];
     }
 
+    public int GetOrderCounter()
+    {
+        return orderCounter;
+    }
     public bool CheckOrder()
     {
+        Debug.Log(orders[orderCounter]);
+        Debug.Log(createdCreature);
+        Debug.Log(orderCounter);
         if (orders[orderCounter] == createdCreature)
         {
             return true;
+
         }
         return false;
     }
@@ -93,6 +105,11 @@ public class GameManager : MonoBehaviour
     public int GetCreature()
     {
         return createdCreature;
+    }
+
+    public int GetHumanity()
+    {
+        return humanity;
     }
 
     public void ChangeOrder()
@@ -105,6 +122,7 @@ public class GameManager : MonoBehaviour
         if (humanity <= 100)
         {
             humanity = humanity + 17;
+
         }
         modInt = false;
         modSpd = false;
@@ -223,10 +241,13 @@ public class GameManager : MonoBehaviour
                 Debug.LogError("JSON file parsed, but 'orders' is null. Check JSON structure.");
             }
 
+            int i = 0;
+
             foreach (Order order in orderList.orders)
             {
                 Debug.Log($"Customer: {order.customer}, Subject: {order.subject}, Description: {order.description}");
-                orderArray[orderCounter] = order;
+                orderArray[i] = order;
+                i++;    
             }
         }
         else
@@ -248,9 +269,12 @@ public class GameManager : MonoBehaviour
                 Debug.LogError("JSON file parsed, but 'solds' is null. Check JSON structure.");
             }
 
+            int i = 0;
+
             foreach (Sold sold in soldList.solds)
             {
-                soldArray[orderCounter] = sold;
+                soldArray[i] = sold;
+                i++;
             }
         }
         else

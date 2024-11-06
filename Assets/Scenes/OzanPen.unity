@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 31647681}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: name
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4336,17 +4336,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TriggerDialogue, Assembly-CSharp
-        m_MethodName: SendLines
-        m_Mode: 1
+      - m_Target: {fileID: 1376948956}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &673525056
 MonoBehaviour:
@@ -5193,6 +5193,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835542735}
   m_Mesh: {fileID: 3525479140033381557, guid: 2b1b624b568469d49a384a5cbe6812cb, type: 3}
+--- !u!1 &842211550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842211551}
+  m_Layer: 0
+  m_Name: empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842211551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842211550}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.819727, y: 1.8997953, z: 0.014433879}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &843711603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5769,7 +5800,7 @@ GameObject:
   - component: {fileID: 877981394}
   m_Layer: 5
   m_Name: Text (TMP) (2)
-  m_TagString: Untagged
+  m_TagString: sellto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8960,7 +8991,7 @@ GameObject:
   - component: {fileID: 1355220966}
   m_Layer: 5
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: job
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9237,7 +9268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376948957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9437,9 +9468,21 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1418909884}
-        m_TargetAssemblyTypeName: TriggerDialogue, Assembly-CSharp
-        m_MethodName: SendLines
+        m_TargetAssemblyTypeName: TriggerDialogue4, Assembly-CSharp
+        m_MethodName: SendLines4
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2137207105}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9495,7 +9538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418909879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d65acb7308002a4598d7cd4d30a9a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: d95fc7d2a6cc4a249bf37f9153879751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBoxCode: {fileID: 1906805573}
@@ -9740,7 +9783,7 @@ PrefabInstance:
       addedObject: {fileID: 1462284323}
     - targetCorrespondingSourceObject: {fileID: -1840813336682991447, guid: 0306295d4d678d040afb4edf4c904b22, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1462284322}
+      addedObject: {fileID: 1462284324}
   m_SourcePrefab: {fileID: 100100000, guid: 0306295d4d678d040afb4edf4c904b22, type: 3}
 --- !u!4 &1462284314 stripped
 Transform:
@@ -9765,7 +9808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goodBossFeedbackSC: {fileID: 1462284323}
-  badBossFeedbackSC: {fileID: 1462284322}
+  badBossFeedbackSC: {fileID: 1462284324}
 --- !u!65 &1462284318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9781,30 +9824,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 78.014534, y: 78.02166, z: 74.78517}
   m_Center: {x: 0.00015136017, y: -0.0266706, z: -28.721395}
---- !u!114 &1462284322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462284315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d65acb7308002a4598d7cd4d30a9a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBoxCode: {fileID: 1906805573}
-  linesToBeActive:
-  - If i were you, i would try reading the <color=green>order</color>.
-  - before <color=red>wasting</color> more valuable resources.
-  - The shareholders won't be pleased.
-  - We have to <color=red>get rid of</color> the GEMO.
 --- !u!114 &1462284323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9822,6 +9847,24 @@ MonoBehaviour:
   - Now that's a job <color=green>well done</color>.
   - Remember, the organisms we sell serve a higher purpose.
   - It's all about a <color=green>better future</color>.
+--- !u!114 &1462284324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462284315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9f1202fd99e1d4e9fe348460976632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBoxCode: {fileID: 1906805573}
+  linesToBeActive:
+  - If i were you, i would try reading the <color=green>order</color>.
+  - before <color=red>wasting</color> more valuable resources.
+  - The shareholders won't be pleased.
+  - We have to <color=red>get rid of</color> the GEMO.
 --- !u!4 &1469958795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71b0460267a96114ea9dbf7f2aa19ceb, type: 3}
@@ -9880,7 +9923,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485111517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9888,7 +9931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 37.8}
+  m_AnchoredPosition: {x: -0, y: 42.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485111519
@@ -9911,7 +9954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ORDER #1
+  m_text: ORDER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9938,10 +9981,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11
+  m_fontSize: 18
   m_fontSizeBase: 11
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -9997,6 +10040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489653698}
+  - component: {fileID: 1489653699}
   m_Layer: 0
   m_Name: UI
   m_TagString: UI
@@ -10026,6 +10070,18 @@ Transform:
   - {fileID: 1376948957}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489653699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489653697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5462762ae930e374eb42d25759854916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499004598
 GameObject:
   m_ObjectHideFlags: 0
@@ -10589,6 +10645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559002980}
   - component: {fileID: 1559002979}
+  - component: {fileID: 1559002981}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -10608,27 +10665,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a2c31225cae5446b59e42748c4a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orders: 030000000100000006000000040000000200000005000000
-  orderCounter: 1
-  humanity: 0
   modInt: 0
   modSpd: 0
   modPwr: 0
   modEco: 0
   prefabsCre:
+  - {fileID: 6110010716286695035, guid: a651f358f9d99f24fb5a10e21e2b7c31, type: 3}
+  - {fileID: 6110010716286695035, guid: ecbe6b3d7b7107849954347ff4ee97a8, type: 3}
   - {fileID: 2497474658388661250, guid: 4262c015a0c43af438f0963bee99d9df, type: 3}
+  - {fileID: 1812101139253146460, guid: 3e25f8430eec90746bfcd688540f5004, type: 3}
   - {fileID: 2149836341865862425, guid: 10e23dff60f869f4e80c520ca84dd622, type: 3}
   - {fileID: 3286673762517661329, guid: 8cab05627111bd84399048fc3986cd04, type: 3}
-  - {fileID: 6110010716286695035, guid: a651f358f9d99f24fb5a10e21e2b7c31, type: 3}
-  - {fileID: 7203692486244311759, guid: a1425ad01bf8d4449948eac35dab7bbc, type: 3}
-  - {fileID: 1812101139253146460, guid: 3e25f8430eec90746bfcd688540f5004, type: 3}
   prefabsPre:
-  - {fileID: 6413532085212475160, guid: c041bfd63cef1534caa43bbe7eb8ada1, type: 3}
-  - {fileID: 5693629110737574809, guid: feb6bc020590ff649b1f113eaa269516, type: 3}
-  - {fileID: 5416915412124890295, guid: e7cf58a85eb4826469cb74bd02358130, type: 3}
   - {fileID: 8406628410134431598, guid: 10cecd4078d64054eb2f4ce5aefb0c96, type: 3}
   - {fileID: 590905454268018565, guid: 3ec7a2b34f3389a44822b6ea106dfbab, type: 3}
+  - {fileID: 6413532085212475160, guid: c041bfd63cef1534caa43bbe7eb8ada1, type: 3}
   - {fileID: 3179186855377511473, guid: 65966f81735a16744ae36a7a4dd01732, type: 3}
+  - {fileID: 5693629110737574809, guid: feb6bc020590ff649b1f113eaa269516, type: 3}
+  - {fileID: 5416915412124890295, guid: e7cf58a85eb4826469cb74bd02358130, type: 3}
   previewSpawn: {fileID: 1499004599}
   creatureSpawn: {fileID: 346163659}
   orderList:
@@ -10652,6 +10706,35 @@ MonoBehaviour:
   - customer: 
     subject: 
     description: 
+  soldArray:
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
+  - customer: 
+    mod: 
+    name: 
+    job: 
 --- !u!4 &1559002980
 Transform:
   m_ObjectHideFlags: 0
@@ -10667,6 +10750,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1559002981
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559002978}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1a6e286c017df0849b0eecfb8e50b9e0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1578555138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11710,6 +11889,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1376948956}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1642985918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11943,7 +12134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1896001275}
-  fillBarAmount: 0
+  fillBarValue: 0
   manager: {fileID: 1559002979}
 --- !u!1 &1684007628
 GameObject:
@@ -12922,11 +13113,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771982962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d65acb7308002a4598d7cd4d30a9a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb4c00a76397a488445177f5ba3e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBoxCode: {fileID: 1906805573}
   linesToBeActive:
+  - 
   - Good, I see that you succesfully modified a GEMO.
   - Let's hope that it's the correct mod.
   - When you are ready, place the GEMO on the <color=green>delivery pad</color> on
@@ -13025,6 +13217,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1448103003961708807, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2095028664028090843, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.115
@@ -13080,6 +13276,10 @@ PrefabInstance:
     - target: {fileID: 5297697209779368707, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.11510013
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316277350183661908, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13683,7 +13883,7 @@ GameObject:
   - component: {fileID: 1832383249}
   m_Layer: 5
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: mod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14327,7 +14527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.596, y: 2.317}
+  m_AnchoredPosition: {x: 18.776, y: 2.317}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906805573
@@ -14354,6 +14554,9 @@ MonoBehaviour:
   - Our clients expect results and I expect you to deliver.
   - Well, I think you are all settled, good luck.
   TriggerDialogueSC: {fileID: 0}
+  TriggerDialogueSCB: {fileID: 0}
+  TriggerDialogueSCC: {fileID: 0}
+  TriggerDialogueSCD: {fileID: 0}
   textSpeed: 0.02
 --- !u!114 &1906805574
 MonoBehaviour:
@@ -14665,11 +14868,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922496962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d65acb7308002a4598d7cd4d30a9a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb4c00a76397a488445177f5ba3e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBoxCode: {fileID: 1906805573}
   linesToBeActive:
+  - 
   - Good, I see that you succesfully modified a GEMO.
   - Let's hope that it's the correct mod.
   - When you are ready, place the GEMO on the <color=green>delivery pad</color> on
@@ -15554,7 +15758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2056077192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16086,7 +16290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2137207106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18755,3 +18959,4 @@ SceneRoots:
   - {fileID: 717518525}
   - {fileID: 1703704457}
   - {fileID: 1559002980}
+  - {fileID: 842211551}

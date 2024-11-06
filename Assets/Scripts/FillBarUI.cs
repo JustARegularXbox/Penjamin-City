@@ -6,20 +6,19 @@ using UnityEngine.UI;
 public class FillBarUI : MonoBehaviour
 {
     public Image bar;
-    public float fillBarAmount;
+    public float fillBarValue;
     public GameManager manager;
     
     void Start()
     {
-        fillBarAmount = manager.humanity;
+
     }
 
     
     void Update()
     {
-        
-        bar.fillAmount = fillBarAmount / 100;
-       
+        fillBarValue = manager.GetHumanity();
+        bar.fillAmount = fillBarValue / 100;
 
     }
 }

@@ -21,6 +21,11 @@ TagManager:
   - description
   - UI
   - power
+  - name
+  - mod
+  - sellto
+  - job
+  - sellscreen
   layers:
   - Default
   - TransparentFX

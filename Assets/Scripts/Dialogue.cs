@@ -8,14 +8,20 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public TriggerDialogue TriggerDialogueSC;
+    public TriggerDialogue2 TriggerDialogueSCB;
+    public TriggerDialogue3 TriggerDialogueSCC;
+    public TriggerDialogue4 TriggerDialogueSCD;
+    private GameObject sellObj;
+    private Sell sellMgr;
     public float textSpeed;
     
 
     private int index;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        sellObj = GameObject.Find("/lab/sell machine/sell point");
+        sellMgr = sellObj.GetComponent<Sell>();
         textComponent.text = string.Empty;
         StartDialogue();
         
@@ -36,6 +42,8 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        textComponent.text = "";
+
         //take the text string and break them into a character array        
         foreach (char c in lines[index].ToCharArray())
         {
@@ -83,11 +91,36 @@ public class Dialogue : MonoBehaviour
         gameObject.SetActive(true);
         // Attempt to get the TriggerDialogue component from the specified GameObject
         TriggerDialogueSC = sourceObject.GetComponent<TriggerDialogue>();
+        TriggerDialogueSCB = sourceObject.GetComponent<TriggerDialogue2>();
+        TriggerDialogueSCC = sourceObject.GetComponent<TriggerDialogue3>();
+        TriggerDialogueSCD = sourceObject.GetComponent<TriggerDialogue4>();
+
+        if (TriggerDialogueSCC != null)
+        {
+            Debug.Log("ngr");
+            DisplayActivatedLines(TriggerDialogueSCC.linesToBeActive);
+            TriggerDialogueSC = null;
+        }        
+        if (TriggerDialogueSCD != null)
+        {
+            Debug.Log("ngr");
+            DisplayActivatedLines(TriggerDialogueSCD.linesToBeActive);
+            TriggerDialogueSC = null;
+        }
 
         if (TriggerDialogueSC != null)
         {
-            
-            DisplayActivatedLines(TriggerDialogueSC.linesToBeActive);
+            switch (sellMgr.GetCanSell())
+            {
+                case true:
+                    DisplayActivatedLines(TriggerDialogueSC.linesToBeActive);
+                    break;
+                case false:
+                    DisplayActivatedLines(TriggerDialogueSCB.linesToBeActive);
+                    break;
+                default:
+                    break;
+            }
         }
         else
         {

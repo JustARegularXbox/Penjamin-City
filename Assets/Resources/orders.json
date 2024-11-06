@@ -4,32 +4,32 @@
         {
             "customer": "Ministry of Crisis Operations & Recovery (MCOR)",
             "subject": "Specialized Creature Request for High-Risk Capture / Rescue Operations",
-            "description": "We seek creatures capable of navigating dangerous environments with ease and precision, covering vast distances swiftly and exerting the necessary force to overcome barriers in critical moments."
+            "description": "We seek creatures capable of navigating dangerous environments with ease and <color=green>precision</color>, covering vast distances <color=green>swiftly</color> and exerting the necessary  <color=green>force</color> to overcome barriers in critical moments."
         },
         {
             "customer": "GreenHorizon Cleanup",
             "subject": "Request for Specialized Creatures in Restoration Efforts",
-            "description": "As part of our mission to restore polluted areas, we need creatures with the natural ability to navigate urban environments efficiently while minimizing environmental impact. Our aim is to prepare and sell them to assist in city restoration."
+            "description": "As part of our mission to restore polluted areas, we need creatures with the natural ability to navigate urban environments <color=green>efficiently</color> while minimizing <color=green>environmental impact</color>. Our aim is to prepare and sell them to assist in city <color=green>restoration</color>."
         },
         {
             "customer": "National Wildfire Defense Agency (NWDA)",
             "subject": "Request for Specialized Creature for Wildfire Containment",
-            "description": "We are looking for a creature that can respond to fire situations, assess dynamic threats, and act accordingly to prevent further spread. Sharp instincts for real-time challenges are essential."
+            "description": "We are looking for a creature that can respond to <color=green>fire situations, assess</color> dynamic threats, and act accordingly to prevent further spread. <color=green>Sharp instincts</color> for <color=green>real-time challenges<color> are essential."
         },
         {
             "customer": "Agency for Wildlife Regulation (AWR)",
             "subject": "Request for Specialized Creature to Control Invasive Species",
-            "description": "We seek a resilient creature capable of managing invasive species in forest settings without disturbing the ecosystem. It should be suited for wide-scale deployment in difficult areas."
+            "description": "We seek a <color=green>resilient</color> creature capable of managing invasive species in forest settings without disturbing the <color=green>ecosystem</color>. It should be suited for wide-scale deployment in <color=green>difficult areas</color>."
         },
         {
             "customer": "IronClad Construction",
             "subject": "Request for Specialized Creatures for Construction Tasks",
-            "description": "We need creatures to handle demanding tasks on construction sites, from moving materials to operating equipment precisely. Their capabilities will be focused solely on labor with minimal concern for comfort."
+            "description": "We need creatures to handle <color=green>demanding</color> tasks on <color=green>construction sites</color>, from moving materials to operating equipment <color=green>precisely</color>. Their capabilities will be focused solely on <color=green>labor</color> with <color=green>minimal concern for comfort</color>."
         },
         {
             "customer": "Ministry of Land Recovery & Terraforming (MLRT)",
             "subject": "Request for Specialized Creature for Environmental Restoration",
-            "description": "We require a creature to assist in regenerating ecosystems and tackling climate challenges. It would address environmental imbalances, engaging actively in sustainable recovery."
+            "description": "We require a creature to assist in regenerating <color=green>ecosystems</color> and tackling climate <color=green>challenges</color>. It would address environmental <color=green>imbalances</color>, engaging actively in <color=green>sustainable recovery</color>."
         }
     ]
 }
