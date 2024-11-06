@@ -43,24 +43,24 @@ public class GameManager : MonoBehaviour
     private GameObject uiObj;
     private UIManager uiManager;
 
+    public GameObject leftHand;
+    public GameObject rightHand;
+
     void Awake()
     {
         LoadOrders();
         LoadSolds();
         uiObj = GameObject.FindWithTag("UI");
         uiManager = uiObj.GetComponent<UIManager>();
+        leftHand.SetActive(true);
+        rightHand.SetActive(true);
     }
 
     void Update()
     {
-        //Debug.Log(orders[orderCounter]);
-        //Debug.Log(createdCreature);
-        //Debug.Log(orderCounter);
+        leftHand.SetActive(true);
+        rightHand.SetActive(true);
         uiManager.UpdateText();
-        Debug.Log("modInt " + modInt);
-        Debug.Log("modSpd " + modSpd);
-        Debug.Log("modPwr " + modPwr);
-        Debug.Log("modEco " + modEco);
         createdCreature = (modInt, modSpd, modPwr, modEco) switch
         {
             (true, true, false, false) => 2,
@@ -71,8 +71,6 @@ public class GameManager : MonoBehaviour
             (false, false, true, true) => 3,
             _ => 6
         };
-
-        //Debug.Log(createdCreature);
     }
 
     public GameObject GetPrefab()
@@ -91,9 +89,6 @@ public class GameManager : MonoBehaviour
     }
     public bool CheckOrder()
     {
-        Debug.Log(orders[orderCounter]);
-        Debug.Log(createdCreature);
-        Debug.Log(orderCounter);
         if (orders[orderCounter] == createdCreature)
         {
             return true;
@@ -117,7 +112,6 @@ public class GameManager : MonoBehaviour
         if (orderCounter < 6)
         {
             orderCounter = orderCounter + 1;
-            Debug.Log("orderCounter: " + orderCounter);
         }
         if (humanity <= 100)
         {
@@ -153,10 +147,6 @@ public class GameManager : MonoBehaviour
         {
 
             GameObject newCreature = Instantiate(prefab, creatureSpawn.position, creatureSpawn.rotation);
-            spawnedCreatures.Add(newCreature);  //for list
-
-            
-
         }
         else
         {
@@ -245,7 +235,6 @@ public class GameManager : MonoBehaviour
 
             foreach (Order order in orderList.orders)
             {
-                Debug.Log($"Customer: {order.customer}, Subject: {order.subject}, Description: {order.description}");
                 orderArray[i] = order;
                 i++;    
             }

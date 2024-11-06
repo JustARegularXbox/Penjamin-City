@@ -22,7 +22,7 @@ public class ModSlot : MonoBehaviour
     {
         //IT ONLY CHECKS THE BOOLS WHEN YOU PLACE THE GENES
         Debug.Log(other);
-        Invoke("SpawnPreview", 2);
+        Invoke("SpawnPreview", 0.5);
         Debug.Log("collide");
     }
 
